@@ -1,107 +1,111 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="manifest" href="manifest.json">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="P-Code">
-  <meta name="apple-mobile-web-app-title" content="P-Code">
-  <meta name="theme-color" content="#00479d">
-  <meta name="msapplication-navbutton-color" content="#00479d">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="msapplication-starturl" content="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" sizes="72x72" href="images/icons/icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/icons/icon-72x72.png">
-  <link rel="icon" sizes="96x96" href="images/icons/icon-96x96.png">
-  <link rel="apple-touch-icon" sizes="96x96" href="images/icons/icon-96x96.png">
-  <link rel="icon" sizes="128x128" href="images/icons/icon-128x128.png">
-  <link rel="apple-touch-icon" sizes="128x128" href="images/icons/icon-128x128.png">
-  <link rel="icon" sizes="144x144" href="images/icons/icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="images/icons/icon-144x144.png">
-  <link rel="icon" sizes="152x152" href="images/icons/icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="images/icons/icon-152x152.png">
-  <link rel="icon" sizes="192x192" href="images/icons/icon-192x192.png">
-  <link rel="apple-touch-icon" sizes="192x192" href="images/icons/icon-192x192.png">
-  <link rel="icon" sizes="384x384" href="images/icons/icon-384x384.png">
-  <link rel="apple-touch-icon" sizes="384x384" href="images/icons/icon-384x384.png">
-  <link rel="icon" sizes="512x512" href="images/icons/icon-512x512.png">
-  <link rel="apple-touch-icon" sizes="512x512" href="images/icons/icon-512x512.png">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="manifest" href="manifest.json">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="application-name" content="P-Code">
+      <meta name="apple-mobile-web-app-title" content="P-Code">
+      <meta name="theme-color" content="#00479d">
+      <meta name="msapplication-navbutton-color" content="#00479d">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="msapplication-starturl" content="/">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="icon" sizes="72x72" href="images/icons/icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/icons/icon-72x72.png">
+      <link rel="icon" sizes="96x96" href="images/icons/icon-96x96.png">
+      <link rel="apple-touch-icon" sizes="96x96" href="images/icons/icon-96x96.png">
+      <link rel="icon" sizes="128x128" href="images/icons/icon-128x128.png">
+      <link rel="apple-touch-icon" sizes="128x128" href="images/icons/icon-128x128.png">
+      <link rel="icon" sizes="144x144" href="images/icons/icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="images/icons/icon-144x144.png">
+      <link rel="icon" sizes="152x152" href="images/icons/icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="images/icons/icon-152x152.png">
+      <link rel="icon" sizes="192x192" href="images/icons/icon-192x192.png">
+      <link rel="apple-touch-icon" sizes="192x192" href="images/icons/icon-192x192.png">
+      <link rel="icon" sizes="384x384" href="images/icons/icon-384x384.png">
+      <link rel="apple-touch-icon" sizes="384x384" href="images/icons/icon-384x384.png">
+      <link rel="icon" sizes="512x512" href="images/icons/icon-512x512.png">
 
-  <style>
-    html {
-      font-family: 'Monaco', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-size: 16px;
-      margin: 0;
-      padding: 0;
-      word-break: break-all;
-    }
-    input, button {
-      font-size: 1rem;
-    }
-    #console {
-      position: fixed;
-      top: 160px;
-      left: 0;
-      width: 100%;
-      margin: 1rem auto 0;
-      padding: 1rem;
-      box-sizing: border-box;
-      z-index: 100;
-    }
-    #msg {
-      visibility: hidden;
-    }
-    #editor {
-      display: block;
-      font-size: 1rem;
-      box-sizing: border-box;
-      width: 100%;
-      height: 50%;
-      margin: 1rem 0 0;
-      padding: 1rem;
-    }
-    #reader, #player {
-      display: flex;
-      box-sizing: border-box;
-    }
-    #log {
-      box-sizing: border-box;
-      margin-top: 1rem;
-      padding: 1rem;
-      width: 100%;
-      height: 7rem;
-      overflow: scroll;
-      background: #999;
-    }
-    #log p {
-      margin: 0 0 1rem;
-      background: #000;
-      box-sizing: border-box;
-      color: #fff;
-    }
-  </style>
-  <title>P-Code</title>
-</head>
-<body>
-  <div id="console">
-    <div id="reader">
-      <input type="range" min="0" max="1" step="0.05" id="thresh"><button id="read">OCR</button><span id="msg">processing...</span>
+      <style>
+      html {
+        font-family: 'Monaco', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        word-break: break-all;
+      }
+      input, button {
+        font-size: 1rem;
+      }
+      #console {
+        position: fixed;
+        top: 160px;
+        left: 0;
+        width: 100%;
+        margin: 1rem auto 0;
+        padding: 1rem;
+        box-sizing: border-box;
+        z-index: 100;
+      }
+      #msg {
+        visibility: hidden;
+      }
+      #editor {
+        display: block;
+        font-size: 1rem;
+        box-sizing: border-box;
+        width: 100%;
+        height: 50%;
+        margin: 1.1rem 0 0;
+        padding: 1rem;
+      }
+      #reader, #player, #camera {
+        display: flex;
+        box-sizing: border-box;
+        padding-bottom: 0.5rem;
+        align-items: center;
+      }
+      #log {
+        box-sizing: border-box;
+        margin-top: 1rem;
+        padding: 1rem;
+        width: 100%;
+        height: 7rem;
+        overflow: scroll;
+        background: #999;
+      }
+      #log p {
+        margin: 0 0 1rem;
+        background: #000;
+        box-sizing: border-box;
+        color: #fff;
+      }
+    </style>
+    <title>P-Code</title>
+  </head>
+  <body>
+    <div id="console">
+      <div id="camera">
+        <input type="radio" name="camera" checked="checked" value="environment">REAR</input><input type="radio" name="camera" value="user">FRONT</input><br>
+      </div>
+      <div id="reader">
+        <input type="range" min="0" max="1" step="0.05" id="thresh"><button id="read">OCR</button><span id="msg">processing...</span>
+      </div>
+      <div id="player">
+        <button id="run">RUN</button><input type="checkbox" id="loop">LOOP<br>
+      </div>
+      <textarea name="editor" id="editor" rows="3"></textarea>
+      <div id="log"></div>
+      <p>Fork me on <a href="https://github.com/p-code-magazine/p-code">github</a></p>
     </div>
-    <div id="player">
-      <button id="run">RUN</button><input type="checkbox" id="loop">LOOP<br>
-    </div>
-    <textarea name="editor" id="editor" rows="3"></textarea>
-    <div id="log"></div>
-    <p>Fork me on <a href="https://github.com/p-code-magazine/p-code">github</a></p>
-  </div>
-  <script src="main.js" charset="utf-8"></script>
-</body>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
 </html>
