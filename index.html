@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -30,82 +29,22 @@
   <link rel="icon" sizes="384x384" href="images/icons/icon-384x384.png">
   <link rel="apple-touch-icon" sizes="384x384" href="images/icons/icon-384x384.png">
   <link rel="icon" sizes="512x512" href="images/icons/icon-512x512.png">
-
-  <style>
-    html {
-        font-family: 'Monaco', sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-size: 16px;
-        margin: 0;
-        padding: 0;
-        word-break: break-all;
-      }
-      input, button {
-        font-size: 1rem;
-      }
-      #console {
-        position: fixed;
-        top: 160px;
-        left: 0;
-        width: 100%;
-        margin: 1rem auto 0;
-        padding: 1rem;
-        box-sizing: border-box;
-        z-index: 100;
-      }
-      #msg {
-        visibility: hidden;
-      }
-      #editor {
-        display: block;
-        font-size: 1rem;
-        box-sizing: border-box;
-        width: 100%;
-        height: 50%;
-        margin: 1.1rem 0 0;
-        padding: 1rem;
-      }
-      #reader, #player, #camera {
-        display: flex;
-        box-sizing: border-box;
-        padding-bottom: 0.5rem;
-        align-items: center;
-      }
-      #log {
-        box-sizing: border-box;
-        margin-top: 1rem;
-        padding: 1rem;
-        width: 100%;
-        height: 7rem;
-        overflow: scroll;
-        background: #999;
-      }
-      #log p {
-        margin: 0 0 1rem;
-        background: #000;
-        box-sizing: border-box;
-        color: #fff;
-      }
-    </style>
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-            // Registration was successful
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }, function(err) {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-          });
+  <link rel="stylesheet" href="styles/app.css">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
         });
-      }
-    </script>
+      });
+    }
+  </script>
   <title>P-Code</title>
 </head>
-
 <body>
   <div id="console">
     <div id="camera">
@@ -119,9 +58,10 @@
     </div>
     <textarea name="editor" id="editor" rows="3"></textarea>
     <div id="log"></div>
-    <p>Fork me on <a href="https://github.com/p-code-magazine/p-code" target="_blank">github</a></p>
+    <ul id="footage">
+      <li>Fork me on <a href="https://github.com/p-code-magazine/p-code">GitHub</a></li>
+    </ul>
   </div>
   <script src="main.js" charset="utf-8"></script>
 </body>
-
 </html>
