@@ -40,7 +40,7 @@ body {
 
 .magazine__secondary__content {
   margin: 0 auto;
-  padding: 4rem;
+  padding: 4rem 4rem 8rem;
   max-width: 48rem;
 }
 
@@ -103,6 +103,11 @@ body {
   background: #00457C;
   color: #fff;
   padding: 2rem 0;
+  z-index: 1;
+}
+
+.add-to-cart img {
+  display: none;
 }
 
 @media screen and (min-width: 1024px) and (orientation: landscape) {
@@ -125,7 +130,12 @@ body {
     align-items: center;
   }
 
+  .magazine__secondary__content {
+    padding: 4rem;
+  }
+
   .add-to-cart {
+    padding: 3rem 0;
     left: 50%;
     width: 50%;
   }
