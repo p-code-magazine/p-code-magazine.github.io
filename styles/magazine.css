@@ -22,9 +22,16 @@ body {
   letter-spacing: .05em;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .magazine__secondary {
   background: #00479d;
   color: #fff;
+  position: relative;
+  z-index: 2;
 }  
 
 .magazine__secondary a {
@@ -32,15 +39,16 @@ body {
 }
 
 .brand {
-  position: absolute;
+  position: fixed;
   top: 2em;
   left: 4rem;
   z-index: 1;
+  text-decoration: none;
 }
 
 .magazine__secondary__content {
   margin: 0 auto;
-  padding: 4rem 4rem 8rem;
+  padding: 4rem 4rem 10rem;
   max-width: 48rem;
 }
 
@@ -73,6 +81,7 @@ body {
 .magazine__secondary__content ul {
   list-style: none;
   padding-left: 0;
+  line-height: 1.4;
 }
 
 .magazine__secondary__content ul li:before {
