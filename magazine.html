@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta property="og:local" content="ja_JP">
-      <meta property="og:type" content="website">
-      <meta property="og:description" content="この研究機関誌『P-Code Magazine』創刊号には、P-Code の言語仕様やプログラム例が掲載されています。加えて、Viznut による「We need a Pan-Hacker movement（私たちにはパンハッカー運動が必要だ）」の翻訳、久保田晃弘による書き下ろし「スペシフィック・コード《Specific Codes》」を掲載しています。">
-      <meta property="og:title" content="P-Code Magazine">
-      <meta property="og:url" content="https://p-code-magazine.github.io/magazine">
-      <meta property="og:image" content="https://p-code-magazine.github.io/images/01.jpg">
-      <meta property="og:site_title" content="P-Code Magazine">
-      <meta name="mobile-web-app-capable" content="yes">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <meta name="application-name" content="P-Code">
-      <meta name="apple-mobile-web-app-title" content="P-Code">
-      <meta name="theme-color" content="#00479d">
-      <meta name="msapplication-navbutton-color" content="#00479d">
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-      <meta name="msapplication-starturl" content="/">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="manifest" href="manifest.json">
-      <link rel="icon" sizes="72x72" href="images/icons/icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="images/icons/icon-72x72.png">
-      <link rel="icon" sizes="96x96" href="images/icons/icon-96x96.png">
-      <link rel="apple-touch-icon" sizes="96x96" href="images/icons/icon-96x96.png">
-      <link rel="icon" sizes="128x128" href="images/icons/icon-128x128.png">
-      <link rel="apple-touch-icon" sizes="128x128" href="images/icons/icon-128x128.png">
-      <link rel="icon" sizes="144x144" href="images/icons/icon-144x144.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="images/icons/icon-144x144.png">
-      <link rel="icon" sizes="152x152" href="images/icons/icon-152x152.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="images/icons/icon-152x152.png">
-      <link rel="icon" sizes="192x192" href="images/icons/icon-192x192.png">
-      <link rel="apple-touch-icon" sizes="192x192" href="images/icons/icon-192x192.png">
-      <link rel="icon" sizes="384x384" href="images/icons/icon-384x384.png">
-      <link rel="apple-touch-icon" sizes="384x384" href="images/icons/icon-384x384.png">
-      <link rel="icon" sizes="512x512" href="images/icons/icon-512x512.png">
-      <link rel="stylesheet" href="styles/magazine.css">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M2PVRLN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:local" content="ja_JP">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="この研究機関誌『P-Code Magazine』創刊号には、P-Code の言語仕様やプログラム例が掲載されています。加えて、Viznut による「We need a Pan-Hacker movement（私たちにはパンハッカー運動が必要だ）」の翻訳、久保田晃弘による書き下ろし「スペシフィック・コード《Specific Codes》」を掲載しています。">
+    <meta property="og:title" content="P-Code Magazine">
+    <meta property="og:url" content="https://p-code-magazine.github.io/magazine">
+    <meta property="og:image" content="https://p-code-magazine.github.io/images/01.jpg">
+    <meta property="og:site_title" content="P-Code Magazine">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="P-Code">
+    <meta name="apple-mobile-web-app-title" content="P-Code">
+    <meta name="theme-color" content="#00479d">
+    <meta name="msapplication-navbutton-color" content="#00479d">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" sizes="72x72" href="images/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/icon-72x72.png">
+    <link rel="icon" sizes="96x96" href="images/icons/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="images/icons/icon-96x96.png">
+    <link rel="icon" sizes="128x128" href="images/icons/icon-128x128.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="images/icons/icon-128x128.png">
+    <link rel="icon" sizes="144x144" href="images/icons/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/icons/icon-144x144.png">
+    <link rel="icon" sizes="152x152" href="images/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icons/icon-152x152.png">
+    <link rel="icon" sizes="192x192" href="images/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="images/icons/icon-192x192.png">
+    <link rel="icon" sizes="384x384" href="images/icons/icon-384x384.png">
+    <link rel="apple-touch-icon" sizes="384x384" href="images/icons/icon-384x384.png">
+    <link rel="icon" sizes="512x512" href="images/icons/icon-512x512.png">
+    <link rel="stylesheet" href="styles/magazine.css">
     <title>P-Code Magazine</title>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2PVRLN"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <a class="brand" href='/'><img src="./images/brand.svg" alt=""></a>
     <div class='magazine__primary'>
       <a class='button' href='./downloads/p-code-magazine-1.pdf'>PDF 版をダウンロード</a>
